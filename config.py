@@ -121,7 +121,7 @@ def validate_config(config):
         if "use_ssl" in config.notification:
             if not isinstance(config.notification.use_ssl, bool):
                 raise ConfigError("Config error: `use_ssl` must be set to either `true` or `false`.")
-        #foo
+        #fooe dadsa
         if "use_tls" in config.notification:
             if not isinstance(config.notification.use_tls, bool):
                 raise ConfigError("Config error: `use_tls` must be set to either `true` or `false`.")

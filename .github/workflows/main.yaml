@@ -1,0 +1,15 @@
+name: Main
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: docker build -t mergin-db-sync .
+    - run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 722608637738.dkr.ecr.eu-south-2.amazonaws.com
+        docker tag mergin-db-sync:latest 722608637738.dkr.ecr.eu-south-2.amazonaws.com/mergin-db-sync:latest
+        docker push 722608637738.dkr.ecr.eu-south-2.amazonaws.com/mergin-db-sync:latest

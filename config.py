@@ -173,7 +173,7 @@ def update_config_path(
     path_param: str,
 ) -> None:
     config_file_path = pathlib.Path(path_param)
-    config_file_content = os.environ["CONFIG"].replace("NEWLINE", "\n")
+    config_file_content = os.environ["CONFIG"].replace("NEWLINE", "\n").replace("TAB", "  ")
     config_file_path.write_text(config_file_content)
     print(config_file_content)
     if config_file_path.exists():

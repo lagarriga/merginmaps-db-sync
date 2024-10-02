@@ -53,7 +53,7 @@ def main():
     parser.add_argument(
         "config_file",
         nargs="?",
-        default="/tmp/config.yaml",
+        default="config.yaml",
         help="Path to file with configuration. Default value is config.yaml in current working directory.",
     )
     parser.add_argument(
@@ -64,6 +64,7 @@ def main():
     parser.add_argument(
         "--single-run",
         action="store_true",
+        default=True,
         help="Run just once performing single pull and push operation, instead of running in infinite loop.",
     )
     parser.add_argument(

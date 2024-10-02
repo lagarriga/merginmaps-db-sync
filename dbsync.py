@@ -648,6 +648,7 @@ def create_mergin_client():
     """Create instance of MerginClient"""
     _check_has_password()
     try:
+        print("Connecting to " + config.mergin.url)
         return MerginClient(
             config.mergin.url,
             login=config.mergin.username,

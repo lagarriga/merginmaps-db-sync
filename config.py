@@ -175,7 +175,8 @@ def update_config_path(
     config_file_path = pathlib.Path(path_param)
     config_file_content = os.environ["CONFIG"].replace("NEWLINE", "\n").replace("TAB", "  ")
     config_file_path.write_text(config_file_content)
-    print(config_file_content)
+    print("\n---\n" + config_file_content + "\n---\n")
+    print("\n---\n" + config_file_path.read_text() + "\n---\n")
     if config_file_path.exists():
         print(f"Using config file: {path_param}")
         user_file_config = Dynaconf(

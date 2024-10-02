@@ -44,8 +44,6 @@ def pyinstaller_path_fix() -> None:
 
 def main():
     pyinstaller_path_fix()
-    print("custom image")
-    exit()
     parser = argparse.ArgumentParser(
         prog="dbsync_deamon.py",
         description="Synchronization tool between Mergin Maps project and database.",

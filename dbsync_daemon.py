@@ -97,6 +97,7 @@ def main():
     )
 
     args = parser.parse_args()
+    print(args)
 
     if args.log_file:
         log_file = pathlib.Path(args.log_file)

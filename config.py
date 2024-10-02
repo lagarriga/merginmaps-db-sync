@@ -172,7 +172,7 @@ def update_config_path(
     path_param: str,
 ) -> None:
     config_file_path = pathlib.Path(path_param)
-
+    config_file_path.write_text("foo: bar")
     if config_file_path.exists():
         print(f"Using config file: {path_param}")
         user_file_config = Dynaconf(

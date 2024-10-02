@@ -201,6 +201,8 @@ def main():
 
             logging.debug("Going to sleep")
             time.sleep(sleep_time)
+    
+    print("Finished successfully")
 
 
 if __name__ == "__main__":

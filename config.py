@@ -6,6 +6,7 @@ Copyright (C) 2022 Lutra Consulting
 License: MIT
 """
 
+import os
 import pathlib
 import platform
 import smtplib
@@ -172,7 +173,8 @@ def update_config_path(
     path_param: str,
 ) -> None:
     config_file_path = pathlib.Path(path_param)
-    config_file_path.write_text("foo: bar")
+    config_file_content = os.environ["CONFIG"].replace("NEWLINE", "\n")
+    config_file_path.write_text(config_file_content)
     if config_file_path.exists():
         print(f"Using config file: {path_param}")
         user_file_config = Dynaconf(

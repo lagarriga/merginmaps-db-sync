@@ -107,10 +107,10 @@ def main():
 
     logging.debug(f"== starting mergin-db-sync daemon == version {__version__} ==")
 
-    try:
-        update_config_path(args.config_file)
-    except IOError as e:
-        handle_error_and_exit(e)
+    # try:
+    update_config_path(args.config_file)
+    # except IOError as e:
+    #    handle_error_and_exit(e)
 
     sleep_time = config.as_int("daemon.sleep_time")
     try:

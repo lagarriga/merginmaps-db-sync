@@ -53,7 +53,7 @@ def main():
     parser.add_argument(
         "config_file",
         nargs="?",
-        default="config.yaml",
+        default="/tmp/config.yaml",
         help="Path to file with configuration. Default value is config.yaml in current working directory.",
     )
     parser.add_argument(

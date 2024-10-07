@@ -44,7 +44,7 @@ from config import (
     get_ignored_tables,
     ConfigError,
 )
-
+# hola test
 # set high logging level for geodiff (used by geodiff executable)
 # so we get as much information as possible
 os.environ["GEODIFF_LOGGER_LEVEL"] = "4"  # 0 = nothing, 1 = errors, 2 = warning, 3 = info, 4 = debug
